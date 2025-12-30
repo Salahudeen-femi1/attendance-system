@@ -29,7 +29,7 @@ export default function Login() {
 
     return (
         <>
-            <div className=' bg-[#f0f3f9] h-screen w-full'>
+            <div className=' bg-[#f0f3f9] h-screen w-full '>
                 <div className='flex justify-between p-5'>
                     <div className='flex items-center gap-2 text-lg font-semibold mb-'>
                         <span className='bg-[#cddaf5] rounded-md p-2 '>
@@ -43,10 +43,10 @@ export default function Login() {
                     </div>
                 </div>
 
-                <div className='flex gap-6 w-200 h-110 rounded-lg m-auto mt-10 p-7 justify-center items-center '>
-                    <div className='flex flex-col space-y-6 '>
+                <div className='flex gap-6 w- rounded-lg m-auto justify-center items-center '>
+                    <div className='flex flex-col '>
                         <span>
-                            <div className='flex items-center justify-center p-1 bg-[#cddaf5] rounded-2xl w-[200px] text-[15px] gap-2 text-primary font-semibold mb-4'>
+                            <div className='flex items-center justify-center p-1 bg-[#cddaf5] rounded-2xl w-[200px] text-[15px] gap-2 text-primary font-semibold mb-2'>
                                 <span><SiAdguard size={15} /></span>
                                 <span>Secure Access Portal</span>
                             </div>
@@ -60,13 +60,13 @@ export default function Login() {
                         </span>
                         <span>
                             <div className='mt-5'>
-                                <img src={assets.glow} alt="" className='w-65 h-50 rounded-lg' />
+                                <img src={assets.glow} alt="" className='w-65 h-45 rounded-lg' />
 
                             </div>
                         </span>
                     </div>
                     <div>
-                        <div className='bg-white rounded-lg p-6'>
+                        <div className='bg-white rounded-lg p-4 h-'>
                             <h1 className='text-2xl font-semibold'>
                                 Welcome Back
                             </h1>
@@ -74,7 +74,7 @@ export default function Login() {
                                 Please authenticate to access your dashboard.
                             </p>
 
-                            <div className='bg-[#cddaf5] rounded-lg p-4 flex items-center justify-between mt-4 gap-4'>
+                            <div className='bg-[#cddaf5] rounded-lg p-2 flex items-center justify-between mt-2 gap-4'>
                                 <span className='bg-white/50 rounded-full p-2 '>
                                     <IoFingerPrint size={20} className='text-primary' />
                                 </span>
@@ -99,8 +99,8 @@ export default function Login() {
                                 <div className="grow border-t border-gray-300  "></div>
                             </div>
 
-                            <form className='flex flex-col space-y-4'>
-                                <div className="flex flex-col space-y-1">
+                            <form className='flex flex-col space-y-3' onSubmit={formik.handleSubmit}>
+                                <div className="flex flex-col">
                                     <label htmlFor="username" className="font-semibold">Username</label>
                                     <input
                                         type="username"
@@ -117,7 +117,7 @@ export default function Login() {
                                     />
 
                                 </div>
-                                <div className="flex flex-col space-y-1">
+                                <div className="flex flex-col space-y-">
                                     <label htmlFor="password" className="font-semibold">Password</label>
                                     <input
                                         type="password"
@@ -132,14 +132,14 @@ export default function Login() {
                                             : 'border-[#FBFCFB3]'
                                             } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
                                     />
-                                    
-                                    <button className="text-primary font-medium mt-1 flex justify-end cursor-pointer hover:underline">Forgotten Password?</button>
+
+                                    <button className="text-primary font-medium mt- flex justify-end cursor-pointer hover:underline">Forgotten Password?</button>
 
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="px-4 py-2 bg-primary text-white font-light rounded-md focus:outline-none cursor-pointer mt-2"
+                                    className="px-4 h-10 bg-primary text-white font-meduium rounded-md focus:outline-none cursor-pointer mt-1"
                                 >
                                     Login to system
                                 </button>

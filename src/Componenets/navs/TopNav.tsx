@@ -9,11 +9,11 @@ export default function TopNav() {
   // const [isPopupVisible, setIsPopupVisible] = React.useState(false);
 
   return (
-    <div>
-      <div className="relative w-1/2 bg-white">
+    <div className='w-full flex justify-end items-center gap-3 items-center h-12'>
+      <div className="relativ w- bg-white flex justify-end items-center">
         <label
           htmlFor="searchBox"
-          className="border border-primary/10 rounded-lg bg-secondary md:flex hidden gap-2 items-center h-[45px] w-full px-2"
+          className="border border-primary/10 rounded-lg md:flex hidden gap-2 items-center h-[30px] w-full px-2"
         >
           <IoSearchOutline size={20} />
           <input
@@ -27,16 +27,16 @@ export default function TopNav() {
             autoComplete="off"
           />
         </label>
+      </div>
 
-        <div className='flex gap-3'>
-          <span className='bg-gray-300 p-2 rounded-full '>
-            <BsBellFill size={20}  className='text-primary '/>
+       <div className='flex gap-3'>
+          <span className='bg-gray-300 w-9 h-9 p-2 rounded-full flex justify-center items-center'>
+            <BsBellFill size={18} />
           </span>
-          <span>
-            <BsQuestionCircleFill size={20}  className='text-primary ' />
+          <span className='bg-gray-300 w-9 h-9 p-2 rounded-full flex justify-center items-center'>
+            <BsQuestionCircleFill size={18}  />
           </span>
         </div>
-      </div>
 
 
     </div>
