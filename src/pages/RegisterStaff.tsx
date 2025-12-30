@@ -5,6 +5,7 @@ import { MdMedicalInformation } from "react-icons/md";
 import { IoFingerPrint } from "react-icons/io5";
 import { IoMdQrScanner } from "react-icons/io";
 import { IoCheckmarkSharp } from "react-icons/io5";
+import { IoAlertCircleSharp } from "react-icons/io5";
 
 export default function RegisterStaff() {
 
@@ -44,14 +45,17 @@ export default function RegisterStaff() {
   })
   return (
     <div className='flex justify-between gap-6 w-full'>
-      <div className='w-2/4'>
+      <div className='w-2/4 flex flex-col space-y-5'>
         <span>
-          <h1 className='font-semibold text-xl '>New Staff Registration</h1>
-          <p>Enter staff personal details and enroll their biometric data to register them in the attendance systerm.</p>
+          <h1 className='font-bold text-3xl text-primary '>New Staff <br /> Registration</h1>
+          <p className='text-gray-500 mt-2'>Enter staff personal details and enroll their <br /> biometric data to register them in the <br />attendance systerm.</p>
         </span>
-        <div className='bg-primary/10 border-gray-300 p-3 border w-'>
-          <h2>Registration Guidelines</h2>
-          <ul>
+        <div className='bg-primary/10 border-gray-300 p-4 rounded-lg w-'>
+          <span className='flex gap-2 items-center'>
+            <IoAlertCircleSharp size={20} className='text-primary' />
+            <h2 className='font-semibold text-primary'>Registration Guidelines</h2>
+          </span>
+          <ul className="list-disc list-inside space-y-1 text-primary/80">
             <li>Ensure staff ID is unique</li>
             <li>use Official email for notifications.</li>
             <li>Biometric enrollment require 3 successful scans.</li>
@@ -78,7 +82,7 @@ export default function RegisterStaff() {
                 value={formik.values.staff_id}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.staff_id && formik.errors.staff_id
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.staff_id && formik.errors.staff_id
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -95,7 +99,7 @@ export default function RegisterStaff() {
                 value={formik.values.full_name}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.full_name && formik.errors.full_name
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.full_name && formik.errors.full_name
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -112,7 +116,7 @@ export default function RegisterStaff() {
                 value={formik.values.department}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.department && formik.errors.department
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.department && formik.errors.department
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -125,11 +129,11 @@ export default function RegisterStaff() {
                 type="text"
                 id='position'
                 name='position'
-                placeholder='g.g. Senior Developer'
+                placeholder='e.g. Senior Developer'
                 value={formik.values.position}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.position && formik.errors.position
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.position && formik.errors.position
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -145,7 +149,7 @@ export default function RegisterStaff() {
                 value={formik.values.email_address}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.email_address && formik.errors.email_address
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.email_address && formik.errors.email_address
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -162,7 +166,7 @@ export default function RegisterStaff() {
                 value={formik.values.phone_number}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className={`text-black border-gray-300 bg-backgroundBlack placeholder:text-gray-400 ${formik.touched.phone_number && formik.errors.phone_number
+                className={`text-black border-gray-300 bg-primary/10 placeholder:text-gray-400 ${formik.touched.phone_number && formik.errors.phone_number
                   ? 'border-red-500'
                   : 'border-[#FBFCFB3]'
                   } placeholder-black rounded-md px-4 h-[50px] border text-sm w-full outline-0`}
@@ -171,14 +175,15 @@ export default function RegisterStaff() {
 
           </div>
 
-          <div className='bg-[#cddaf5] rounded-lg p-2 flex items-center justify-between mt-2 gap-4 border-gray-300 border-dashed'>
+          <div className='bg-[#cddaf5] rounded-lg p-2 flex items-center justify-between mt-5 gap-4 border-gray-300 border-dashed'>
             <div className='flex items-center gap-2'>
               <span className='bg-white/50 rounded-full p-2 '>
                 <IoFingerPrint size={20} className='text-primary' />
               </span>
               <span>
                 <h2 className='text-lg font-medium'>
-                  Biometric Authentication
+                  Biometric Enrollment
+                  {/* <p>Status: Not Scanned</p> */}
                 </h2>
                 <p className='text-gray-600'>Scan finger on device</p>
               </span>
@@ -193,11 +198,15 @@ export default function RegisterStaff() {
           </div>
 
           <div className='flex justify-end gap-3 mt-5 font-medium'>
-            <button className='text-primary cursor-pointer'>Cancel</button>
+            <button
+            onClick={() => formik.resetForm()}
+            className='text-primary cursor-pointer'>Cancel</button>
             <button
               className='bg-primary text-white px-4 py-2 rounded-lg flex gap-2 items-center cursor-pointer'>
               <span><IoCheckmarkSharp size={20} /></span>
-              Register Staff
+              {
+                formik.isSubmitting ? 'Registering...' : 'Register Staff'
+              }
             </button>
           </div>
         </form>
